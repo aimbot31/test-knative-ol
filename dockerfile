@@ -1,10 +1,10 @@
 FROM python:buster
 
+RUN pip install flask requests
+
 ENV FLASK_APP=app.py
 
 EXPOSE 8080
-
-RUN pip install flask requests
 
 COPY ./app.py ./app.py
 
