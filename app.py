@@ -6,4 +6,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return f"Hello " + requests.get("https://api.adviceslip.com/advice").json()["slip"]["advice"]
+    return f"Hello mec : " + requests.get("https://api.adviceslip.com/advice").json()["slip"]["advice"]
