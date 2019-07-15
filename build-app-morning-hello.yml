@@ -1,0 +1,15 @@
+apiVersion: build.knative.dev/v1alpha1
+kind: Build
+metadata:
+  name: morning-hello
+spec:
+  source:
+    git:
+      url: https://github.com/aimbot31/test-knative-ol
+      revision: master
+  template:
+    name: morning-hello
+    kind: BuildTemplate # (or ClusterBuildTemplate)
+    arguments:
+    - name: IMAGE
+      value: hub.docker.com/r/aimbot31/test-knative-ol
